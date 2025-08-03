@@ -1,0 +1,56 @@
+Dynamic Blog Website Project Plan:
+----------------------------------------------------------------
+Part 1: Set Up the Repository and Project Plan
+- Create a GitHub repository called dynamic-blog-website
+- initialize README file that explains the project
+- Clone the repository 
+- Create three main pages: index.html (Homepage), new-post.html (Create Post), and post.html (View/Edit Post)
+- Document the plan in a file called project-plan.txt
+- Add and commit project-plan.txt to the repository
+- Commit and push the set up to origin main
+----------------------------------------------------------------
+Part 2: Build the Homepage and Post Listing
+----------------------------------------------------------------
+- Create a branch called feature/homepage
+- Add to the index.html a layout that lists all blog posts
+- Use JavaScript to load the blog post data from local storage and display it as a list
+- Create a styles.css file with styling for a responsive layout
+- Commit and push the changes
+- Create a pull request for feature/homepage branch and merge to the main
+----------------------------------------------------------------
+Part 3: Implement Create Post Functionality
+----------------------------------------------------------------
+- Create a branch called feature/new-post
+- Add to the new-post.html a form to enter the blog post title, content, and an optional image
+- Add form validation to ensure the title and content are not empty before saving
+- Add JavaScript to save the new blog post data to local storage
+- Add styling to styles.css if needed
+- Commit and push the changes
+- Create a pull request for feature/new-post branch and merge to the main
+----------------------------------------------------------------
+Part 4: Implement View and Edit Post Functionality
+----------------------------------------------------------------
+- Create a branch called feature/view-edit-post
+- Add to post.html code to display the blog post details
+- Add JavaScript to load the post data from local storage based on the post ID passed in the URL
+- Add an edit button that allows users to modify the post’s title and content
+- Save the user’s changes back to the local storage
+- Add styling to styles.css if needed
+- Commit and push the changes
+- Create a pull request for feature/view-edit-post branch and merge to the main
+----------------------------------------------------------------
+Part 5: Implement Delete Functionality and Final Touches
+----------------------------------------------------------------
+- Create a branch called feature/delete-post
+- Add a delete button on post.html to remove the post from local storage
+- Test the application to ensure everything works correctly
+- Add styling to styles.css if needed
+- Commit and push the changes
+- Create a pull request for feature/delete-post branch and merge to the main
+----------------------------------------------------------------
+Bonus Part: Add Responsive Styling
+----------------------------------------------------------------
+- Create a branch called feature/styling
+- Add responsive styles to ensure the layout adapts to mobile, tablet, and desktop screens
+- Commit and push the changes
+- Create a pull request for feature/styling branch and merge to the main
