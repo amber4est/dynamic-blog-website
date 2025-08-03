@@ -39,6 +39,7 @@ if (postList){
 
         //add the post to the list
         postList.appendChild(postListed);
+
     });
 }
 //validate title and content
@@ -175,7 +176,7 @@ if (editPostForm){
         event.preventDefault();
 
         if (isValid){
-            editSuccessMessage.textContent="The Post has been edited!";
+            editSuccessMessage.textContent = "The Post has been edited!";
 
             const postId = editPostForm.getAttribute("data-post-id");
             const index = posts.findIndex(p => p.id === postId);
@@ -213,6 +214,26 @@ function showEditForm(post) {
 
     //store the post id in a variable
     editPostForm.setAttribute("data-post-id", post.id);
+}
+
+
+//delete posts
+const deleteButton = document.getElementById("deleteButton");
+
+if (deleteButton && editPostForm) {
+    deleteButton.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        const postId = editPostForm.getAttribute("data-post-id");
+
+        let posts = JSON.parse(localStorage.getItem("posts")) || [];
+        //post to be deleted
+        posts = posts.filter(post => post.id !== postId);
+        //update posts
+        localStorage.setItem("posts", JSON.stringify(posts));
+
+        editSuccessMessage.textContent = "The post has been deleted!";
+    });
 }
 
 //localStorage.removeItem("posts"); //use to clear local storage
