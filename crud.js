@@ -1,7 +1,7 @@
 //LOAD BLOG POST DATA FROM LOCAL STORAGE
 //post object
 const post = {
-    id: postID,
+    //id: postID,
     title: title,
     content: content,
     image: image
@@ -13,28 +13,30 @@ const posts = JSON.parse(localStorage.getItem("posts")) || [];
 //get post list
 const postList = document.getElementById("post-list");
 
-//add for each post in a list with the title, content, and image
-posts.forEach(post => {
-    //creating the post in a list
-    const postListed = document.createElement("li");
-    //title
-    const title = document.createElement("h2");
-    title.textContent = post.title;
-    postListed.appendChild(title);
-    //content
-    const content = document.createElement("p");
-    content.textContent = post.content;
-    postListed.appendChild(content);
-    //image
-    const image = document.createElement("img");
-    image.src = post.image;
-    image.alt = "Post's image";
-    postListed.appendChild(image);
+//if statement added so there is no confusion between index.html and new-post.html
+if (postList){
+    //add for each post in a list with the title, content, and image
+    posts.forEach(post => {
+        //creating the post in a list
+        const postListed = document.createElement("li");
+        //title
+        const title = document.createElement("h2");
+        title.textContent = post.title;
+        postListed.appendChild(title);
+        //content
+        const content = document.createElement("p");
+        content.textContent = post.content;
+        postListed.appendChild(content);
+        //image
+        const image = document.createElement("img");
+        image.src = post.image;
+        image.alt = "Post's image";
+        postListed.appendChild(image);
 
-    //add the post to the list
-    postList.appendChild(postListed);
-});
-
+        //add the post to the list
+        postList.appendChild(postListed);
+    });
+}
 //validate title and content
 const postForm = document.getElementById("postForm");
 
@@ -46,7 +48,7 @@ const contentError = document.getElementById("contentError");
 
 const successMessage = document.getElementById("successMessage");
 
-contactForm.addEventListener("submit", function(event){
+postForm.addEventListener("submit", function(event){
 
     titleError.textContent="";
     contentError.textContent="";
@@ -75,26 +77,37 @@ contactForm.addEventListener("submit", function(event){
         event.preventDefault();
         isValid=false;
     }
+    event.preventDefault();
 
     if (isValid){
         successMessage.textContent="New Post has been Added!";
     }
 
-    event.preventDefault();
+     
+    //new post object
+    const imageInput = document.getElementById("image");
 
+    const titleValue = titleInput.value();
+    const contentValue = contentInput.value();
+    const imageValue = imageInput.value();
+    const newPost = {
+    //id: postID,
+    title: titleValue,
+    content: contentValue,
+    image: imageValue
+    };
+    
+    //get posts from local storage
+    const posts = JSON.parse(localStorage.getItem("posts")) || [];
+
+    //add new post object to the array
+    posts.push(newPost);
+    //set/add to local storage
+    localStorage.setItem("posts", JSON.stringify(posts));
 });
 
-const imageInput = document.getElementById("image");
+//cancel post button
+postForm.addEventListener("reset", function(){
+    window.location.href = "index.html";
+});
 
-//new post object
-const newPost = {
-    id: postID,
-    title: titleInput,
-    content: contentInput,
-    image: imageInput
-};
-
-//add new post object to the array
-posts.push(newPost);
-//set/add to local storage
-localStorage.setItem("posts", JSON.stringify(posts));

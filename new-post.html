@@ -7,13 +7,14 @@
     <title>Add New Post</title>
     <link rel="stylesheet" href="styles.css"> 
     <script src="crud.js" defer></script>
+    
 </head>
 <body>
     <header>
     <h1>Add a new post:</h1>
     </header>
-    <form action="#" id="postForm">
-        <h2>Add the following details:</h2>
+    <form action="#" id="postForm" class="postForm">
+        <h2>Add the following details:</h2><br>
         
         <label for="title">Title:</label><br>
         <input type="text" id="title" name="title">
@@ -29,7 +30,8 @@
         <input type="url" id="image">
         <br>
 
-        <button type="submit" class="addPostButton">Add Post</button>
+        <button type="submit" class="addPostButton" id="addPostButton">Add Post</button>
+        <button type="reset" class="cancelPostButton" id="cancelPostButton">Cancel Post</button>
 
         <p id="successMessage" class="success"></p>
     </form>
