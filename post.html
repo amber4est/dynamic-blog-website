@@ -4,9 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Blog Website</title>
+    <title>View and Edit Posts</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <script src="crud.js" defer></script>
 </head>
 <body>
+    <header>
+    <h1>View and Edit Your Current Posts</h1>
+    </header>
 
+   <ul id="post-list" class="post-list"></ul>
+   
+   <form action="#" id="editPostForm" class="editPostForm" style="display: none;">
+        <h2>Edit the following details:</h2><br>
+        
+        <label for="editTitle">Title:</label><br>
+        <input type="text" id="editTitle" name="editTitle">
+        <span class="error" id="editTitleError"></span>
+        <br><br>
+
+        <label for="editContent">Content:</label><br>
+        <textarea type="text" id="editContent" name="editContent" rows="3"></textarea>
+        <span class="error" id="editContentError"></span>
+        <br><br>
+/
+        <label for="editImage">Image (Optional):</label><br>
+        <input type="url" id="editImage">
+        <br>
+
+        <div id="editButtons" class="editButtons">
+            <button type="submit" class="editPostButton" id="editPostButton">Save Post</button>
+            <button type="reset" class="cancelEditPostButton" id="cancelEditPostButton">Cancel Post</button>
+            <button type="button" id="deleteButton" class="deleteButton">Delete Post</button>
+        </div>
+
+        <p id="editSuccessMessage" class="success"></p>
+    </form>
+
+    <footer>
+        <p>&copy; 2025 Dynamic Blog Website</p>
+    </footer>
 </body>
 </html>
