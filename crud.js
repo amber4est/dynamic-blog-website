@@ -34,3 +34,67 @@ posts.forEach(post => {
     //add the post to the list
     postList.appendChild(postListed);
 });
+
+//validate title and content
+const postForm = document.getElementById("postForm");
+
+const titleInput = document.getElementById("title");
+const contentInput = document.getElementById("content");
+
+const titleError = document.getElementById("titleError");
+const contentError = document.getElementById("contentError");
+
+const successMessage = document.getElementById("successMessage");
+
+contactForm.addEventListener("submit", function(event){
+
+    titleError.textContent="";
+    contentError.textContent="";
+    successMessage.textContent="";
+
+    let isValid=true;
+
+    if (titleInput.value.trim()==='') {
+        titleError.textContent="Please enter a title.";
+        event.preventDefault();
+        isValid=false;
+    }
+    else if (titleInput.value.length < 2) {
+        titleError.textContent="Title must be at least 2 characters.";
+        event.preventDefault();
+        isValid=false;
+    }
+
+    if (contentInput.value.trim()==='') {
+        contentError.textContent="Please enter some content.";
+        event.preventDefault();
+        isValid=false;
+    }
+    else if (contentInput.value.length < 2) {
+        contentError.textContent="Content must be at least 2 characters.";
+        event.preventDefault();
+        isValid=false;
+    }
+
+    if (isValid){
+        successMessage.textContent="New Post has been Added!";
+    }
+
+    event.preventDefault();
+
+});
+
+const imageInput = document.getElementById("image");
+
+//new post object
+const newPost = {
+    id: postID,
+    title: titleInput,
+    content: contentInput,
+    image: imageInput
+};
+
+//add new post object to the array
+posts.push(newPost);
+//set/add to local storage
+localStorage.setItem("posts", JSON.stringify(posts));
