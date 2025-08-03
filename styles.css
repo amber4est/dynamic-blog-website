@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightsteelblue;
+    font-family: Arial;
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 100%;
+    line-height: 24px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 4px 4px 4px white;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 100%;
+    font-size: x-small;
+    padding: 5px;
+}
