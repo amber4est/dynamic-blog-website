@@ -11,8 +11,9 @@
 </head>
 <body>
     <header>
-    <h1>Add a new post:</h1>
+    <h1>New Post</h1>
     </header>
+    
     <form action="#" id="postForm" class="postForm">
         <h2>Add the following details:</h2><br>
         
@@ -29,12 +30,22 @@
         <label for="image">Image (Optional):</label><br>
         <input type="url" id="image">
         <br>
-
-        <button type="submit" class="addPostButton" id="addPostButton">Add Post</button>
-        <button type="reset" class="cancelPostButton" id="cancelPostButton">Cancel Post</button>
+        
+        <div id="buttons" class="buttons">
+            <button type="submit" class="addPostButton" id="addPostButton">Add Post</button>
+            <button type="reset" class="cancelPostButton" id="cancelPostButton">Cancel Post</button>
+        </div>
 
         <p id="successMessage" class="success"></p>
     </form>
+    <br>
+    <div id="viewPostsButton">
+    <button type="submit" class="viewPostsButton" id="viewPostsButton">View All Posts</button>
+    <br><br>
+    </div>
 
+    <footer>
+        <p>&copy; 2025 Dynamic Blog Website</p>
+    </footer>
 </body>
 </html>
