@@ -4,11 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Blog Website</title>
+    <title>Add New Post</title>
     <link rel="stylesheet" href="styles.css"> 
     <script src="crud.js" defer></script>
 </head>
 <body>
+    <header>
+    <h1>Add a new post:</h1>
+    </header>
+    <form action="#" id="postForm">
+        <h2>Add the following details:</h2>
+        
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title">
+        <span class="error" id="titleError"></span>
+        <br><br>
+
+        <label for="content">Content:</label><br>
+        <textarea type="text" id="content" name="content" rows="3"></textarea>
+        <span class="error" id="contentError"></span>
+        <br><br>
+
+        <label for="image">Image (Optional):</label><br>
+        <input type="url" id="image">
+        <br>
+
+        <button type="submit" class="addPostButton">Add Post</button>
+
+        <p id="successMessage" class="success"></p>
+    </form>
 
 </body>
 </html>
