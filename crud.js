@@ -31,8 +31,8 @@ if (postList){
         content.textContent = post.content;
         postListed.appendChild(content);
 
-        //image
-        if (post.image && typeof post.image === "string" && post.image.trim() !== ""){
+        //image - can't get to work unforunately :(
+        if (post.image){
             const image = document.createElement("img");
             image.src = post.image;
             image.alt = "Post's image";
