@@ -32,10 +32,10 @@ if (postList){
         postListed.appendChild(content);
 
         //image
-        if (post.image){
+        if (post.image && typeof post.image === "string" && post.image.trim() !== ""){
             const image = document.createElement("img");
             image.src = post.image;
-            image.alt = "Error: Post's image";
+            image.alt = "Post's image";
             postListed.appendChild(image);
         }
 
