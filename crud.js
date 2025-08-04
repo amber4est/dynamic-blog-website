@@ -35,7 +35,7 @@ if (postList){
         if (post.image){
             const image = document.createElement("img");
             image.src = post.image;
-            image.alt = "Post's image";
+            image.alt = "Error: Post's image";
             postListed.appendChild(image);
         }
 
@@ -92,7 +92,7 @@ if (postForm){
             successMessage.textContent="New Post has been Added!";
 
             //new post object
-            const imageInput = document.getElementById("image");
+            const imageInput = document.getElementById("img");
             const titleValue = titleInput.value;
             const contentValue = contentInput.value;
             const imageValue = imageInput.value;
