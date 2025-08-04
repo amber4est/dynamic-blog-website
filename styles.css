@@ -167,18 +167,24 @@ footer {
 }
 
 .post-list h2 {
-    background-color: azure;
+    background-color: rgba(161, 177, 199, 0.11);
     font-size: 20px;
     padding: 10px;
-    margin: 10px;
+    margin: 10px auto;
     font-weight: 800;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 80%;
 }
 
 .post-list p {
     background-color: white;
-    font-size: 15px;
+    font-size: 18px;
     padding: 10px;
-    margin: 10px;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 75%;
 }
 
 .post-list img {

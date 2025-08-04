@@ -93,7 +93,6 @@ if (postForm){
 
             //new post object
             const imageInput = document.getElementById("image");
-            console.log("Image input value on submit:", imageInput.value);
             const titleValue = titleInput.value;
             const contentValue = contentInput.value;
             const imageValue = imageInput.value;
@@ -239,5 +238,3 @@ if (deleteButton && editPostForm) {
 }
 
 //localStorage.removeItem("posts"); //use to clear local storage
-
-console.log("postList is:", postList);
