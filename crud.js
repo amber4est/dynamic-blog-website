@@ -15,6 +15,7 @@ if (postList){
         const titleLink = document.createElement("a");
         titleLink.href = "#";
         titleLink.textContent = post.title;
+        //edit form - clickable title
         titleLink.addEventListener("click", function() {
             showEditForm(post);
         });
@@ -29,10 +30,11 @@ if (postList){
         const content = document.createElement("p");
         content.textContent = post.content;
         postListed.appendChild(content);
+
         //image
         if (post.image){
             const image = document.createElement("img");
-            image.src = post.image.url;
+            image.src = post.image;
             image.alt = "Post's image";
             postListed.appendChild(image);
         }
@@ -91,7 +93,7 @@ if (postForm){
 
             //new post object
             const imageInput = document.getElementById("image");
-
+            console.log("Image input value on submit:", imageInput.value);
             const titleValue = titleInput.value;
             const contentValue = contentInput.value;
             const imageValue = imageInput.value;
@@ -184,7 +186,7 @@ if (editPostForm){
             if (index !== -1) {
                 posts[index].title = editTitleInput.value;
                 posts[index].content = editContentInput.value;
-                posts[index].image = editImage.value;
+                posts[index].image = editImageInput.value;
                 localStorage.setItem("posts", JSON.stringify(posts));
             }
         }
@@ -237,3 +239,5 @@ if (deleteButton && editPostForm) {
 }
 
 //localStorage.removeItem("posts"); //use to clear local storage
+
+console.log("postList is:", postList);
