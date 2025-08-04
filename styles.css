@@ -12,12 +12,16 @@ body {
 header {
     background-color: black;
     color: white;
-    text-align: center;
     width: 100%;
-    line-height: 24px;
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 4px 4px 4px white;
+    h1 {
+        line-height: 24px;
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
 }
 
 footer {
@@ -180,4 +184,36 @@ footer {
 .post-list img {
     background-color: blueviolet;
     width: 100%;
+}
+
+nav {
+    text-align: center;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline;
+    padding: 0;
+    margin: 0 auto;
+}
+
+nav ul li a {
+    color: black;
+    background-color: slateblue;
+    border: 2px solid white;
+    box-shadow: 0.5px 0.5px 0.5px white;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 20px;
+    padding-left: 7%;
+    padding-right: 7%;
+    margin: 5px;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+nav ul li a:hover {
+    background-color: white;
+    box-shadow: 0.5px 0.5px 0.5px white;
+    color: black;   
 }
