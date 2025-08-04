@@ -227,3 +227,110 @@ nav ul li a:hover {
 h2 {
     text-align: center;
 }
+
+@media (max-width: 480px) {
+  header h1, h2 {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+
+  nav ul li a {
+    display:inline-block;
+  }
+  
+  .addPostButton, .cancelPostButton, .editPostButton, .cancelEditPostButton, .deleteButton, .postForm h2, #editPostForm h2 {
+    width: 100%;
+    font-size: smaller;
+    }
+
+    .post-list, #editPostForm {
+        width: 100%;
+    }
+
+    .editButtons, .buttons {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1, h2 {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    nav ul li a {
+        display:inline-block;
+    }
+
+    .addPostButton, .cancelPostButton, .editPostButton, .cancelEditPostButton, .deleteButton, .postForm h2, #editPostForm h2 {
+        width: 100%;
+        font-size: smaller;
+    }
+
+    .post-list {
+        width: 100%;
+    }
+
+    .post-list, #editPostForm {
+        width: 100%;
+    }
+
+    .editButtons, .buttons {
+        width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+  header h1, h2 {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+
+  nav ul li a {
+    display:inline-block;
+  }
+
+  .addPostButton, .cancelPostButton, .editPostButton, .cancelEditPostButton, .deleteButton,  .postForm h2, #editPostForm h2 {
+    width: 100%;
+    font-size: smaller;
+    }
+
+    .post-list {
+        width: 100%;
+    }
+
+    .post-list, #editPostForm {
+        width: 100%;
+    }
+
+    .editButtons, .buttons {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+  header h1, h2 {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+
+  nav ul li a {
+    display:inline-block;
+  }
+
+  .addPostButton, .cancelPostButton, .editPostButton, .cancelEditPostButton, .deleteButton,  .postForm h2, #editPostForm h2 {
+    width: 100%;
+    }
+
+    .post-list {
+        width: 100%;
+    }
+
+    .post-list, #editPostForm {
+        width: 100%;
+    }
+
+    .editButtons, .buttons {
+        width: 100%;
+    }
+}
