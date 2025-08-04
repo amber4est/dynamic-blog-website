@@ -1,4 +1,4 @@
-<!--View and edit post--> 
+<!--View and edit post-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,10 +22,14 @@
         <br>
     </header>
 
+    <h2>Click on the title of the post you would like to edit or delete!</h2>
+    <br>
+
    <ul id="post-list" class="post-list"></ul>
+   <br>
    
    <form action="#" id="editPostForm" class="editPostForm" style="display: none;">
-        <h2>Edit the following details:</h2><br>
+        <h2>Edit the following details or delete the blog entirely:</h2><br>
         
         <label for="editTitle">Title:</label><br>
         <input type="text" id="editTitle" name="editTitle">
@@ -49,6 +53,12 @@
 
         <p id="editSuccessMessage" class="success"></p>
     </form>
+
+    <br>
+    <div id="viewPostsButton">
+        <button type="submit" class="viewPostsButton" id="viewPostsButton">View Updated Posts</button>
+        <br><br>
+    </div>
 
     <footer>
         <p>&copy; 2025 Dynamic Blog Website</p>

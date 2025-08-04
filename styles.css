@@ -217,3 +217,7 @@ nav ul li a:hover {
     box-shadow: 0.5px 0.5px 0.5px white;
     color: black;   
 }
+
+h2 {
+    text-align: center;
+}
