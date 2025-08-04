@@ -188,8 +188,10 @@ footer {
 }
 
 .post-list img {
-    background-color: blueviolet;
-    width: 100%;
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 75%;
+    margin: 10px;
 }
 
 nav {
@@ -250,6 +252,10 @@ h2 {
     .editButtons, .buttons {
         width: 100%;
     }
+
+    .post-list img {
+        width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -276,6 +282,10 @@ h2 {
     }
 
     .editButtons, .buttons {
+        width: 100%;
+    }
+
+    .post-list img {
         width: 100%;
     }
 }
@@ -306,6 +316,10 @@ h2 {
     .editButtons, .buttons {
         width: 100%;
     }
+
+    .post-list img {
+        width: 100%;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -331,6 +345,10 @@ h2 {
     }
 
     .editButtons, .buttons {
+        width: 100%;
+    }
+
+    .post-list img {
         width: 100%;
     }
 }
